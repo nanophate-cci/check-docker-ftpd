@@ -8,7 +8,7 @@ jobs:
         image: stilliard/pure-ftpd
         environment:
           FTP_USER_NAME: circleci
-          FTP_USER_PASS: pass
+          FTP_USER_PASS: ""
           FTP_USER_HOME: /home/circleci
     steps:
       - checkout
