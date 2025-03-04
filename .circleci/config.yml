@@ -4,7 +4,12 @@ jobs:
   build:
     docker:
       - image: cimg/base:current
-      - image: stilliard/pure-ftpd
+      - name: ftpd_server
+        image: stilliard/pure-ftpd
+        environment:
+          FTP_USER_NAME: circleci
+          FTP_USER_PASS: pass
+          FTP_USER_HOME: /home/circleci
     steps:
       - checkout
       - run: echo "hello"
