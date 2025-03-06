@@ -13,3 +13,4 @@ jobs:
     steps:
       - checkout
       - run: echo "hello"
+      - run: df -h
